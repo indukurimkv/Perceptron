@@ -13,3 +13,5 @@ if __name__ == "__main__":
     weights = SNN.genSNN(2,1,1)
     netOut = forward(netIn, weights)
     
+    weights
+    
