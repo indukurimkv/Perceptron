@@ -22,4 +22,9 @@ def genSNN(numInps, *shape):
     for i, layerShape in enumerate(shape):
         biasMatrix[i, layerShape:] = np.NAN
     
-    return np.matrix(weightMatrix), biasMatrix
+    return weightMatrix, biasMatrix
+
+def getSNNAsMatrix(numInps, *shape):
+    netShape = (numInps, *shape)
+    weights, biases = genSNN(numInps, *shape)
+    return np.matrix(weights), np.matrix(biases)
